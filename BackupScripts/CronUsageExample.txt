@@ -1,0 +1,32 @@
+    Minute (0-59):
+        *: Any value (wildcard).
+        0: A specific minute (e.g., 0 for the top of the hour).
+        */X: Every X minutes (e.g., */15 for every 15 minutes).
+
+    Hour (0-23):
+        *: Any value (wildcard).
+        0: A specific hour (e.g., 0 for midnight).
+        */X: Every X hours (e.g., */6 for every 6 hours).
+
+    Day of the Month (1-31):
+        *: Any value (wildcard).
+        1: A specific day of the month.
+        */X: Every X days (e.g., */3 for every 3 days).
+
+    Month (1-12 or Jan-Dec):
+        *: Any value (wildcard).
+        1 or Jan: A specific month.
+
+    Day of the Week (0-6 or Sun-Sat):
+        *: Any value (wildcard).
+        0 or Sun: A specific day of the week.
+        1-5 or Mon-Fri: A range of weekdays.
+        */X: Every X days of the week (e.g., */2 for every other day).
+
+Here are a few examples to illustrate the syntax:
+
+    0 3 * * *: Run every day at 3 AM.
+    */15 * * * *: Run every 15 minutes.
+    0 0 1 1 *: Run on January 1st at midnight.
+    0 8 * * 1-5: Run every weekday at 8 AM.
+    0 12 * 1-6 *: Run every day at 12 PM, but only in January to June.
